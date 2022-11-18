@@ -1,0 +1,36 @@
+# CONSUMO API CON JAVASCRIPT
+
+## QUE ES UNA API (Aplication programing interface)
+-- Interfaz es una forma de interactuar con un programa
+-- las API son interfaces de interaccion entre aplicaciones
+-- REST => representational state transfer
+-- API Rest => interfaces de comunicacion por medio de HTTP 
+
+## FLUJO E COMUNICACION FRONTEND - BACKEND
+-- El usuario interactua 
+-- El front envia peticion al back 
+-- El back responde con un HTML, XML o JSON
+-- El front renderiza 
+
+## ENDPOINTS
+-- Los endpoints son rutas
+-- Sirven para solicitar contenidos especificos de la API 
+
+## QUERY PARAMETERS
+-- Informacion extra a los endpoints para limitar aun mas o especificar mejor la informacion solicitada
+
+## HTTP STATUS CODE 
+-- Es la forma en que el protocolo HTTP nos da un spoiler de como esta resultando la peticion 
+-- van desde el 100 hasta el 500
+-- 200 peticion respondida con exito
+-- 300 redirect, 307 redirect temporal, 308 redirect permanente
+-- 400 error del frontend, 401 ruta no autorizada 
+-- El código de error HTTP 418 Soy una tetera indica que el servidor se rehusa a preparar café porque es una tetera. Este error es una referencia al Hyper Text Coffee Pot Control Protocol, creado como parte de una broma del April Fools' de 1998
+-- 500 error en el backend 
+
+## API KEY
+-- Es una forma de identificar el backend quien esta realizando una solicitud 
+-- Autenticacion: conciste en notificar quien es cada quien
+-- Autorizacion: indica que permisos tiene cada quien 
+-- Api key por lo general un query parameter 
+-- Autorization por lo general va en los headers 
