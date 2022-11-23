@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
 
-        img {
-            max-width: 600px;
-            width: 90%;
-        }
+      img {
+        max-width: 600px;
+        width: 90%;
+      }
     </style>
-</head>
-<body>
-    <h1>Gatitos aleatorios</h1>
+  </head>
+  <body>
+    <h1>Michis App</h1>
 
-    <img id="img_1" alt="Foto gatito aleatorio">
-    <img id="img_2" alt="Foto gatito aleatorio">
-    <img id="img_3" alt="Foto gatito aleatorio">
+    <section id="randomMichis">
+      <h2>Michis aleatorios</h2>
+      <article>
+        <img id="img_1" alt="Foto gatito aleatorio" />
+        <button>Add to Favorites</button>
+      </article>
 
-    <button class="btn">Muestrame otro gatito</button>
-    
+      <article>
+        <img id="img_2" alt="Foto gatito aleatorio" />
+        <button>Add to Favorites</button>
+      </article>
+
+      <article>
+        <img id="img_3" alt="Foto gatito aleatorio" />
+        <button>Add to Favorites</button>
+      </article>
+
+      <button class="btn">Muestrame otro gatito</button>
+    </section>
+
+    <section id="favoritesMichis">
+      <article>
+        <img id="img_4" alt="Foto gatito favorito" />
+        <button>Add to Favorites</button>
+      </article>
+    </section>
+
     <script src="./index.js" defer></script>
-</body>
+  </body>
 </html>
