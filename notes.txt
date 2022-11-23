@@ -34,3 +34,13 @@
 -- Autorizacion: indica que permisos tiene cada quien 
 -- Api key por lo general un query parameter 
 -- Autorization por lo general va en los headers 
+
+## METODOS HTTP 
+-- Es la forma en que el frontend le da un spoiler al backend de que tipo de solicitud va a realizar 
+-- GET: Es el metodo por defecto y se utilizan para solicitar y consumir informacion
+-- POST: Se utiliza para crear informacion o registros
+-- PUT / PATCH: Se utilizan para editar informacion antes creada, el PUT indica que vamos a editar todo la informacion del registro 
+y el PATCH indica que solo se va a ediat una perte del registro
+-- DELETE: Se utiliza para borrar informacion o registros 
+
+
