@@ -1,5 +1,5 @@
 const API_URL_RANDOM = "https://api.thecatapi.com/v1/images/search?limit=2";
-const API_URL_FAVORITES = "https://api.thecatapi.com/v1/favourites?limit=2";
+const API_URL_FAVORITES = "https://api.thecatapi.com/v1/favourites";
 
 const spanError = document.getElementById("error");
 
@@ -38,7 +38,7 @@ const loadRandomMichis = async () => {
 
 };
 
-const loadFavoritesMichis = async () => {
+const loadFavouriteMichis = async () => {
   const options = {
     method: "GET",
     headers: {
@@ -64,7 +64,29 @@ const loadFavoritesMichis = async () => {
     });
 };
 
-loadFavoritesMichis();
+async function saveFavouriteMichis() {
+  const res = await fetch(API_URL_FAVORITES, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key":
+        "live_aCULxXarZdDfjky1JoyauJ8E7CfDnJrb7JcehmMcQ8ej1pfQJTMMWSl3aUHdxPDl",
+    },
+    body: JSON.stringify({
+      image_id: "935"
+    })
+  });
+
+  const data = await res.json();
+
+  console.log(data);
+
+  if(res.status != 200) {
+    spanError.textContent = data.message
+  }
+}
+
+loadFavouriteMichis();
 
 loadRandomMichis();
 
