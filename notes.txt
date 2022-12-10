@@ -69,3 +69,9 @@ y el PATCH indica que solo se va a ediat una perte del registro
 
 ## BODY 
 -- Es la informacion que va a leer el backend 
+
+## HTTP CLIENTS
+-- Axios: Cliente HTTP basado en promesas.
+-- Trae.js 
+-- node-fetch (Node) 
+-- request (Node)
