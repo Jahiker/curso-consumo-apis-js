@@ -1,0 +1,21 @@
+#favoritesMichis {
+    max-height: 800px;
+    overflow: scroll;
+}
+
+#favoritesMichis::-webkit-scrollbar {
+    display: none;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}

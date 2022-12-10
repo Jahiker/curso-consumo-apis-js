@@ -43,4 +43,29 @@
 y el PATCH indica que solo se va a ediat una perte del registro
 -- DELETE: Se utiliza para borrar informacion o registros 
 
+## HEADERS 
+-- Es la metainformacion que indica como se esta enviando el body
+-- Tambien le indica al backend como nos va a retornar la informacion
 
+-- Content Type 
+--- Le indica al backend como se van a comunicar
+--- Que tipo de informacion le estamos enviando 
+--- Como me va a enviar la informacion de respuesta 
+--- aplication/json - aplication/xml - aplication/zip - aplication/x-www-form-urlencoded 
+--- audio/mpeg - audio/x-ms-wma - audio/vnd.rn-realaudio - audio/x-wav
+--- image/gif - image/jpeg - image/png - image/x-icon - image/svg+xml 
+--- multipart/mixed - multipart/alternative - multipart/related - multipart/form-data 
+--- video/mpeg - video/mp4 - video/quicktime - video/webm 
+--- application/vnd.ms-excel - application/vnd.ms-powerpoint - application/msword
+--- text/css - text/csv - text/html - text/plain - text/xml 
+
+-- Authorization 
+-- Cookies 
+-- Location 
+-- Etc.
+
+### AUTHORIZATION HEADER 
+-- X-API-Key = abc123
+
+## BODY 
+-- Es la informacion que va a leer el backend 

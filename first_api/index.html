@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
     <style>
       body {
         display: flex;
@@ -40,6 +41,14 @@
 
     <section id="favoritesMichis">
       <h2>Michis favoritos</h2>
+    </section>
+
+    <section id="uploadingMichi">
+      <h2>Suba la foto de tu michi</h2>
+      <form id="uploadingForm">
+        <input type="file" name="file" id="file">
+        <button type="button" onclick="uploadMichiPhoto()">Subir foto</button>
+      </form>
     </section>
 
     <script src="./index.js" defer></script>

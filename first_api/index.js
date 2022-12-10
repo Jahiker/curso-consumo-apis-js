@@ -1,5 +1,6 @@
 const API_URL_RANDOM = "https://api.thecatapi.com/v1/images/search?limit=2";
 const API_URL_FAVORITES = "https://api.thecatapi.com/v1/favourites";
+const API_URL_UPLOAD = "https://api.thecatapi.com/v1/images/upload";
 
 const spanError = document.getElementById("error");
 
@@ -34,7 +35,6 @@ const loadRandomMichis = async () => {
 
       btn1.onclick = () => saveFavouriteMichi(data[0].id);
       btn2.onclick = () => saveFavouriteMichi(data[1].id);
-
     }
   } catch (error) {
     throw new Error(err);
@@ -46,7 +46,8 @@ const loadFavouriteMichis = async () => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": "live_aCULxXarZdDfjky1JoyauJ8E7CfDnJrb7JcehmMcQ8ej1pfQJTMMWSl3aUHdxPDl",
+      "x-api-key":
+        "live_aCULxXarZdDfjky1JoyauJ8E7CfDnJrb7JcehmMcQ8ej1pfQJTMMWSl3aUHdxPDl",
     },
   };
 
@@ -69,7 +70,7 @@ const loadFavouriteMichis = async () => {
       const btnText = document.createTextNode("Quitar de favoritos");
 
       btn.appendChild(btnText);
-      btn.onclick = () => deleteFavouriteMichi(michi.id)
+      btn.onclick = () => deleteFavouriteMichi(michi.id);
       img.src = michi.image.url;
       img.width = "150";
 
@@ -111,7 +112,7 @@ async function deleteFavouriteMichi(id) {
     headers: {
       "x-api-key":
         "live_aCULxXarZdDfjky1JoyauJ8E7CfDnJrb7JcehmMcQ8ej1pfQJTMMWSl3aUHdxPDl",
-    }
+    },
   });
 
   const data = await res.json();
@@ -123,7 +124,31 @@ async function deleteFavouriteMichi(id) {
   }
 }
 
+async function uploadMichiPhoto() {
+  const form = document.getElementById("uploadingForm");
+  const formData = new FormData(form);
 
+  const res = await fetch(API_URL_UPLOAD, {
+    method: "POST",
+    headers: {
+      // "Content-Type": "multipart/form-data",
+      "x-api-key": "live_aCULxXarZdDfjky1JoyauJ8E7CfDnJrb7JcehmMcQ8ej1pfQJTMMWSl3aUHdxPDl"
+    },
+    body: formData,
+  })
+  const data = await res.json();
+
+  if (res.status != 201) {
+    spanError.textContent = data.message;
+    console.log({ data });
+  } else {
+    console.log("Foto de michi subida");
+    console.log({ data });
+    console.log(data.url);
+    saveFavouriteMichi(data.id);
+  }
+
+}
 
 loadFavouriteMichis();
 
