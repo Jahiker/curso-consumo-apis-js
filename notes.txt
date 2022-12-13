@@ -75,3 +75,16 @@ y el PATCH indica que solo se va a ediat una perte del registro
 -- Trae.js 
 -- node-fetch (Node) 
 -- request (Node)
+
+## MODE 
+-- Sirve para limitar con a que origenes podemos enviar peticiones
+-- cors, no-cors, same-cors 
+-- Por defecto esta en no-corse
+
+## CACHE
+-- la posibilidad de recordar informacion ya que hemos solicitado anteriormente 
+-- default, no-store, reload, no-cache, force-cache, only-if-cache
+
+## REDIRECT 
+-- le podemos indicar a fetch que hacer al recibir una respuesta de status 300 o redireccion 
+-- follow, error, manual 
